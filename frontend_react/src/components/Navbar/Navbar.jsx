@@ -7,5 +7,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
-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
