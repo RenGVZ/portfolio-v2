@@ -8,3 +8,7 @@ export const client = sanityClient({
   useCdn: true,
   token: import.meta.env.VITE_SANITY_TOKEN
 })
+
+const builder = imageUrlBuilder(client)
+
+export const urlFor = (source) => builder.image(source)
