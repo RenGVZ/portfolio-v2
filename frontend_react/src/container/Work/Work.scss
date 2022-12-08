@@ -64,7 +64,7 @@
 
 
     @media screen and (min-width: 2000px) {
-      height: 470px;
+      width: 470px;
       padding: 1.25rem;
       border-radius: 0.75rem;
     }
@@ -133,9 +133,13 @@
   position: relative;
   flex-direction: column;
 
-  h1 {
+  h4 {
     margin-top: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.5;
+
+    @media screen and (min-width: 2000px) {
+      margin-top: 3rem;
+    }
   }
 
   .app__work-tag {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { AiFillEye, AiFillGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
-import { AppWrap } from '../../wrapper'
+import { AppWrap, MotionWrap } from '../../wrapper'
 import { urlFor, client } from '../../client'
 import './Work.scss'
 
@@ -21,7 +21,18 @@ const Work = () => {
   }, [])
 
   const handleWorkFilter = (item) => {
+    setActiveFilter(item)
+    setAnimateCard([{ y: 100, opacity: 0}])
 
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1}])
+
+      if(item == 'All') {
+        setFilterWork(works)
+      } else {
+        setFilterWork(works.filter((work) => work.tags.includes(item)))
+      }
+    }, 500)
   }
 
   return (
@@ -30,7 +41,7 @@ const Work = () => {
 
       <div className='app__work-filter'>
         {
-          ['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
+          ['React', 'Next JS', 'Blockchain', 'Crypto', 'Full Stack', 'All'].map((item, index) => (
             <div
               key={index}
               onClick={() => handleWorkFilter(item)}
@@ -96,4 +107,8 @@ const Work = () => {
   )
 }
 
-export default AppWrap(Work, 'work')
+export default AppWrap(
+  MotionWrap(Work, 'app__works'),
+  'work',
+  'app__primarybg'
+)
