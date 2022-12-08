@@ -4,8 +4,6 @@ import { images } from '../../constants'
 import { AppWrap } from '../../wrapper'
 import './Header.scss'
 
-import './Header.scss'
-
 const scaleVariants = {
   whileInView: {
     scale: [0, 1],
@@ -19,7 +17,7 @@ const scaleVariants = {
 
 const Header = () => {
   return (
-    <div id='home' className='app__header app__flex'>
+    <div className='app__header app__flex'>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 1 }}
@@ -29,7 +27,7 @@ const Header = () => {
           <div className='badge-cmp app__flex'>
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
-              <p className='p-text'>Hello, I am</p>
+              <p className='p-text'>Hello, I'm</p>
               <h1 className='head-text'>Gavin</h1>
             </div>
           </div>

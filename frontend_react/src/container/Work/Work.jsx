@@ -40,17 +40,15 @@ const Work = () => {
       <h2 className='head-text'>My Creative <span>Portfolio</span></h2>
 
       <div className='app__work-filter'>
-        {
-          ['React', 'Next JS', 'Blockchain', 'Crypto', 'Full Stack', 'All'].map((item, index) => (
-            <div
-              key={index}
-              onClick={() => handleWorkFilter(item)}
-              className={`app__work-filter-item app__flex p-text ${ activeFilter === item ? 'item-active' : '' }`}
-            >
-              {item}
-            </div>
-          ))
-        }
+        {['React', 'Vue', 'Next JS', 'Blockchain', 'Full Stack', 'All'].map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleWorkFilter(item)}
+            className={`app__work-filter-item app__flex p-text ${ activeFilter === item ? 'item-active' : '' }`}
+          >
+            {item}
+          </div>
+        ))}
       </div>
 
       <motion.div
@@ -70,8 +68,8 @@ const Work = () => {
               >
                 <a href={work.projectLink} target='_blank' rel='noreferrer'>
                   <motion.div
-                    whileHover={{ scale: [1, 0.9] }}
                     whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 0.9] }}
                     transition={{ duration: 0.25 }}
                     className='app__flex'
                   >
