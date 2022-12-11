@@ -177,6 +177,12 @@
     width: 80%;
   }
 
+  @media screen and (min-width: 2000px) {
+    .prof-img {
+      width: 50%
+    }
+  }
+
   img {
     width: 100%;
     object-fit: contain;

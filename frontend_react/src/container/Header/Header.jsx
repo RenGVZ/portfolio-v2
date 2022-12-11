@@ -21,9 +21,9 @@ const Header = () => {
   const [nightDayEmoji, setNightDayEmoji] = useState('☀️')
 
   useEffect(() => {
-    if (time.getHours() < 12) {
+    if (time.getHours() < 12 && time.getHours() > 2) {
       setGreetingString('Good morning')
-    } else if (time.getHours() > 12 && time.getHours() < 17) {
+    } else if (time.getHours() >= 12 && time.getHours() < 17) {
       setGreetingString('Good afternoon')
     } else {
       setGreetingString('Good evening')
