@@ -45,8 +45,9 @@
     background-color: #fff;
 
     img {
-      width: 50%;
+      // width: 50%;
       height: 50%;
+      object-fit: cover;
     }
 
     &:hover {

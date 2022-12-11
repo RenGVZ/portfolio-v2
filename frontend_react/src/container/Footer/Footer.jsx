@@ -93,6 +93,10 @@ const Footer = () => {
           </div>
         )}
       </div>
+      <div className='copyright'>
+        <p className='p-text'>@2022 GAVIN</p>
+        <p className='p-text'>All rights reserved</p>
+      </div>
     </>
   )
 }
@@ -100,5 +104,5 @@ const Footer = () => {
 export default AppWrap(
   MotionWrap(Footer, 'app__footer'),
   'contact',
-  'app__whitebg'
+  'app__primarybg'
 )

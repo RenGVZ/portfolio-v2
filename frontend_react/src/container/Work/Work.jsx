@@ -15,7 +15,8 @@ const Work = () => {
     const query = '*[_type == "works"]'
     client.fetch(query)
       .then((data) => {
-        setWorks(data)
+        const sortedWorks = data.sort((a, b) => a.priority - b.priority)
+        setWorks(sortedWorks)
         setFilterWork(data)
       })
   }, [])
@@ -40,7 +41,7 @@ const Work = () => {
       <h2 className='head-text'>My Creative <span>Portfolio</span></h2>
 
       <div className='app__work-filter'>
-        {['React', 'Vue', 'Next JS', 'Blockchain', 'Full Stack', 'All'].map((item, index) => (
+        {['React', 'Vue', 'Next JS', 'Web3', 'Laravel', 'Ruby on Rails', 'Full Stack', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}

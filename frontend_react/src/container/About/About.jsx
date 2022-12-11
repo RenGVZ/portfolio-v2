@@ -16,13 +16,21 @@ const About = () => {
 
   return (
     <>
-      <h2 className='head-text'>
-        I know that
-        <span> Good Development</span>
-        <br />
-        means
-        <span> Good Business</span>
-      </h2>
+      <div className='bio-section'>
+        <h2 className='head-text'>
+          Crafting Intuitive
+          <span> Web Experiences</span>
+          <br />
+          <span> One Line of Code </span>
+          at a Time
+        </h2>
+        <p className='p-text'>
+          Hi there! I have over 4 years of experience as a Web Developer, specializing in frontend technologies such as React and Vue.
+          I also have extensive experience in Web Design and Full Stack Application Development. In my current role, I work on a variety of exciting projects, using my skills and knowledge to create intuitive, engaging user experiences.
+          In my free time, I enjoy staying up to date with the latest developments in web technology, kickboxing and exploring the vibrant city of Tokyo.
+          Here is a more detailed look at my most specialized skills.
+        </p>
+      </div>
 
       <div className='app__profiles'>
         {abouts.map((about, index) => (

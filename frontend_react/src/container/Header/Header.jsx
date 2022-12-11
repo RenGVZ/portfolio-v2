@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { images } from '../../constants'
 import { AppWrap } from '../../wrapper'
@@ -16,6 +16,21 @@ const scaleVariants = {
 }
 
 const Header = () => {
+  const [time] = useState(new Date())
+  const [greetingString, setGreetingString] = useState('')
+  const [nightDayEmoji, setNightDayEmoji] = useState('☀️')
+
+  useEffect(() => {
+    if (time.getHours() < 12) {
+      setGreetingString('Good morning')
+    } else if (time.getHours() > 12 && time.getHours() < 17) {
+      setGreetingString('Good afternoon')
+    } else {
+      setGreetingString('Good evening')
+      setNightDayEmoji('🌙')
+    }
+  }, [])
+
   return (
     <div className='app__header app__flex'>
       <motion.div
@@ -25,16 +40,17 @@ const Header = () => {
       >
         <div className='app__header-badge'>
           <div className='badge-cmp app__flex'>
-            <span>👋</span>
+            <span>{nightDayEmoji}</span>
             <div style={{ marginLeft: 20 }}>
-              <p className='p-text'>Hello, I'm</p>
+              <p className='p-text'>{greetingString}, I'm </p>
               <h1 className='head-text'>Gavin</h1>
             </div>
           </div>
 
           <div className='tag-cmp app__flex'>
-            <p className='p-text'>Front End</p>
-            <p className='p-text'>Web Developer</p>
+            <p className='p-text'>Based in Tokyo 🗼</p>
+            <p className='p-text'>Frontend Web Developer</p>
+            <p className='p-text'>Welcome to my portfolio</p>
           </div>
         </div>
       </motion.div>
@@ -44,7 +60,7 @@ const Header = () => {
         transition={{ duration: 1, delayChildren: 0.5 }}
         className='app__header-img'
       >
-        <img src={images.profile} alt='profile_bg' />
+        <img className='prof-img' src={images.profile2} alt='profile_bg' />
         <motion.img
           whileInView={{ scale: [0, 1]}}
           duration={{ duration: 1, ease: 'easeInOut' }}
@@ -60,7 +76,7 @@ const Header = () => {
         whileInView={ scaleVariants.whileInView }
         className='app__header-circles'
       >
-        {[images.flutter, images.redux, images.sass].map((circle, index) => (
+        {[images.reactLogo, images.vueLogo, images.figma].map((circle, index) => (
           <div className='circle-cmp app__flex' key={`circle-${index}`}>
             <img src={circle} alt='circle' />
           </div>

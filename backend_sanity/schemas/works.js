@@ -44,5 +44,10 @@ export default {
         },
       ],
     },
+    {
+      name: 'priority',
+      title: 'Priority',
+      type: 'number'
+    },
   ],
 };
