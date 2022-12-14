@@ -1,9 +1,16 @@
 #home {
   position: relative;
-  background: url('../../assets/bgIMG.png');
+  background: url('../../assets/customBg-pc.png');
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
+
+  @media screen and (max-width: 400px) {
+    background: url('../../assets/customBg-mb.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+  }
 
   .app__wrapper {
     padding: 0;

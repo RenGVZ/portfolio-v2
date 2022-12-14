@@ -44,7 +44,7 @@ const Skills = () => {
               <div className='app__flex' style={{ background: skill.bgColor }}>
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
-              <p className='p-text'>{skill.name}</p>
+              <p className='p-text-light'>{skill.name}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -94,5 +94,5 @@ const Skills = () => {
 export default AppWrap(
   MotionWrap(Skills, 'app__skills'),
   'skills',
-  'app__whitebg'
+  'app__darkbg'
 )

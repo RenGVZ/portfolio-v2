@@ -43,7 +43,7 @@ const Header = () => {
             <span>{nightDayEmoji}</span>
             <div style={{ marginLeft: 20 }}>
               <p className='p-text'>{greetingString}, I'm </p>
-              <h1 className='head-text'>Gavin</h1>
+              <h1 className='head-text' style={{color: 'black'}}>Gavin</h1>
             </div>
           </div>
 

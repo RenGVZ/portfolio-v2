@@ -24,7 +24,7 @@ const About = () => {
           <span> One Line of Code </span>
           at a Time
         </h2>
-        <p className='p-text'>
+        <p className='p-text-light'>
           Hi there! I have over 4 years of experience as a Web Developer, specializing in frontend technologies such as React and Vue.
           I also have extensive experience in Web Design and Full Stack Application Development. In my current role, I work on a variety of exciting projects, using my skills and knowledge to create intuitive, engaging user experiences.
           In my free time, I enjoy staying up to date with the latest developments in web technology, kickboxing and exploring the vibrant city of Tokyo.
@@ -45,7 +45,7 @@ const About = () => {
             <h2 className='bold-text' style={{ marginTop: 20 }}>
               {about.title}
             </h2>
-            <p className='p-text' style={{ marginTop: 10 }}>
+            <p className='p-text-light' style={{ marginTop: 10 }}>
               {about.description}
             </p>
           </motion.div>
@@ -58,5 +58,5 @@ const About = () => {
 export default AppWrap(
   MotionWrap(About, 'app__about'),
   'about',
-  'app__whitebg'
+  'app__darkbg'
 )
