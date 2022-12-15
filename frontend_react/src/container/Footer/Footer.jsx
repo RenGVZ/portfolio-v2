@@ -89,7 +89,7 @@ const Footer = () => {
           >
             <div className='app__flex'>
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value='http://localhost:5173/#contact'></input>
+              <input type="hidden" name="_next" value='https://www.gavinrene.online'></input>
               <input
                 type='text'
                 className='p-text'
