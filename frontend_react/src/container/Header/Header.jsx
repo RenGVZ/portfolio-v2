@@ -48,6 +48,7 @@ const Header = () => {
           </div>
 
           <div className='tag-cmp app__flex'>
+            <p className='p-text'>Digital Native 💻</p>
             <p className='p-text'>Based in Tokyo 🗼</p>
             <p className='p-text'>Frontend Web Developer</p>
             <p className='p-text'>Welcome to my portfolio</p>
